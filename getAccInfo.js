@@ -20,7 +20,7 @@ async function getAccountInfo(walletAddress) {
         const COMPRESSED_SIZE_PER_ASSET = 40;      // Approx. bytes per compressed asset
         const UNCOMPRESSED_SIZE_PER_ASSET = 926;   // Approx. bytes per uncompressed NFT (Metaplex-style)
 
-        const compressedBytes = (numAssets * COMPRESSED_SIZE_PER_ASSET) + 128;
+        const compressedBytes = (t = numAssets * COMPRESSED_SIZE_PER_ASSET, t + (t ? 128 : 0));
         const compressedCostlamports = numAssets ? numAssets * COMPRESSED_SIZE_PER_ASSET * 3480 * 2 : 0;
         const uncompressedBytes = numAssets * (UNCOMPRESSED_SIZE_PER_ASSET + 128);
         const uncompressedCostlamports = numAssets ? numAssets * UNCOMPRESSED_SIZE_PER_ASSET * 3480 * 2 : 0;

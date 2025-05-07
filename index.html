@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Savings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Solana Savings</h1>
+    <div class="button-group">
+        <button class="custom-btn selected">amount</button>
+        <button class="custom-btn">wallet</button>
+        <button class="custom-btn">accurate</button>
+    </div>
+    <div id="button-description" class="button-description">Shows the total amount of assets in the wallet.</div>
+    <div class="input-container">
+        <input type="text" id="walletInput" placeholder="Enter Solana wallet here">
+        <button class="submit-btn" id="submitBtn">Submit</button>
+    </div>
+    <div id="result"></div>
+
+    <script src="getAccInfo.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Button group selection logic
+            const btns = document.querySelectorAll('.custom-btn');
+            const descDiv = document.getElementById('button-description');
+            const descriptions = [
+                'Shows the total amount of assets in the wallet.',
+                'Shows the amount of compressed assets in the wallet with additional info',
+                'Under development.'
+            ];
+            btns.forEach((btn, idx) => {
+                btn.addEventListener('click', function() {
+                    btns.forEach(b => b.classList.remove('selected'));
+                    btn.classList.add('selected');
+                    descDiv.textContent = descriptions[idx];
+                });
+            });
+
+            // Submit button logic
+            const submitBtn = document.getElementById('submitBtn');
+            const walletInput = document.getElementById('walletInput');
+            const resultDiv = document.getElementById('result');
+
+            submitBtn.addEventListener('click', async () => {
+                const walletAddress = walletInput.value.trim();
+                if (!walletAddress) {
+                    resultDiv.innerHTML = '<p class="error">Please enter a wallet address.</p>';
+                    return;
+                }
+
+                try {
+                    resultDiv.innerHTML = '<p class="loading">Loading...</p>';
+                    const data = await getAccountInfo(walletAddress);
+                    resultDiv.innerHTML = `
+                        <div class="account-info">
+                            <h2>Results for ${data.address}</h2>
+                            <p><strong>Number of Assets:</strong> ${data.numAssets}</p>
+                            <p><strong>Compressed Bytes:</strong> ${data.compressedBytes}</p>
+                            <p><strong>Uncompressed Bytes:</strong> ${data.uncompressedBytes}</p>
+                            <p><strong>Compressed Cost:</strong> ${data.compressedCost}</p>
+                            <p><strong>Uncompressed Cost:</strong> ${data.uncompressedCost}</p>
+                            <br>
+                            <p><strong>Solana Savings:</strong> ${data.savings}</p>
+                        </div>
+                    `;
+                } catch (error) {
+                    resultDiv.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

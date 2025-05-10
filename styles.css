@@ -171,3 +171,98 @@ input[type="text"]::placeholder {
     margin-top: 20px;
     margin-bottom: 40px;
 }
+
+/* Token List Styles */
+.token-list {
+    margin-top: 30px;
+    border-top: 1px solid #82ff11;
+    padding-top: 20px;
+}
+
+.token-list h3 {
+    color: #f4f604;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.token-card {
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #82ff11;
+    transition: transform 0.2s ease;
+}
+
+.token-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(130, 255, 17, 0.2);
+}
+
+.token-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.token-image-placeholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8rem;
+    border: 1px dashed #82ff11;
+}
+
+.token-details {
+    flex: 1;
+    min-width: 0; /* Allows text to wrap properly */
+}
+
+.token-details h4 {
+    color: #f4f604;
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    word-break: break-word;
+}
+
+.token-details p {
+    margin: 5px 0;
+    color: #ffffff;
+    font-size: 0.9rem;
+    word-break: break-all;
+}
+
+.token-details strong {
+    color: #82ff11;
+}
+
+.nft-badge {
+    display: inline-block;
+    background-color: #f4f604;
+    color: #000000;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.info-badge {
+    display: inline-block;
+    background-color: #666666;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 8px;
+}

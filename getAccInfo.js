@@ -52,7 +52,7 @@ async function getAccountInfo(walletAddress, updateUI) {
                     // Add a 300ms delay between requests
                     await delay(300);
                     
-                    const tokenInfoResponse = await fetch('http://localhost:3000/api/tokenInfo', {
+                    const tokenInfoResponse = await fetch('https://zkcomp-viewer-production.up.railway.app/api/tokenInfo', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ tokenAddress: item.tokenData.mint })

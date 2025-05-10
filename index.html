@@ -33,19 +33,63 @@
 
                 try {
                     resultDiv.innerHTML = '<p class="loading">Loading...</p>';
-                    const data = await getAccountInfo(walletAddress);
-                    resultDiv.innerHTML = `
-                        <div class="account-info">
-                            <h2>Results for ${data.address}</h2>
-                            <p><strong>Number of Assets:</strong> ${data.numAssets}</p>
-                            <p><strong>Compressed Bytes:</strong> ${data.compressedBytes}</p>
-                            <p><strong>Uncompressed Bytes:</strong> ${data.uncompressedBytes}</p>
-                            <p><strong>Compressed Cost:</strong> ${data.compressedCost}</p>
-                            <p><strong>Uncompressed Cost:</strong> ${data.uncompressedCost}</p>
-                            <br>
-                            <p><strong>Solana Savings:</strong> ${data.savings}</p>
-                        </div>
-                    `;
+                    
+                    // Function to update the UI with new data
+                    const updateUI = (data) => {
+                        resultDiv.innerHTML = `
+                            <div class="account-info">
+                                <h2>Results for ${data.address}</h2>
+                                <p><strong>Number of Assets:</strong> ${data.numAssets}</p>
+                                <p><strong>Compressed Bytes:</strong> ${data.compressedBytes}</p>
+                                <p><strong>Uncompressed Bytes:</strong> ${data.uncompressedBytes}</p>
+                                <p><strong>Compressed Cost:</strong> ${data.compressedCost}</p>
+                                <p><strong>Uncompressed Cost:</strong> ${data.uncompressedCost}</p>
+                                <br>
+                                <p><strong>Solana Savings:</strong> ${data.savings}</p>
+                                
+                                <div class="token-list">
+                                    <h3>Assets</h3>
+                                    ${data.items.map((item, index) => {
+                                        if (item.tokenInfo) {
+                                            const isNFT = item.tokenInfo.decimals === 0 && item.tokenData.amount === 1;
+                                            const formattedAmount = isNFT ? 
+                                                '1' : 
+                                                (item.tokenData.amount / Math.pow(10, item.tokenInfo.decimals)).toLocaleString();
+                                            
+                                            return `
+                                                <div class="token-card">
+                                                    ${item.tokenInfo.imageUri !== "N/A" ? 
+                                                        `<img src="${item.tokenInfo.imageUri}" alt="${item.tokenInfo.name}" class="token-image">` : 
+                                                        '<div class="token-image-placeholder">No Image</div>'
+                                                    }
+                                                    <div class="token-details">
+                                                        <h4>${item.tokenInfo.name}</h4>
+                                                        ${!isNFT ? `<p><strong>Symbol:</strong> ${item.tokenInfo.ticker}</p>` : ''}
+                                                        <p><strong>Amount:</strong> ${formattedAmount}</p>
+                                                        ${isNFT ? `<p class="nft-badge">NFT</p>` : ''}
+                                                    </div>
+                                                </div>
+                                            `;
+                                        } else {
+                                            return `
+                                                <div class="token-card">
+                                                    <div class="token-image-placeholder">No Image</div>
+                                                    <div class="token-details">
+                                                        <h4>Asset #${index + 1}</h4>
+                                                        <p><strong>Mint:</strong> ${item.tokenData?.mint || 'Unknown'}</p>
+                                                        <p><strong>Amount:</strong> ${item.tokenData?.amount || 'Unknown'}</p>
+                                                        ${index >= 10 ? `<p class="info-badge">Token info not loaded</p>` : ''}
+                                                    </div>
+                                                </div>
+                                            `;
+                                        }
+                                    }).join('')}
+                                </div>
+                            </div>
+                        `;
+                    };
+
+                    await getAccountInfo(walletAddress, updateUI);
                 } catch (error) {
                     resultDiv.innerHTML = `<p class="error">Error: ${error.message}</p>`;
                 }

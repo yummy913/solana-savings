@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Savings Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="simulation.css">
+    <link rel="icon" href="nab.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>Solana Savings Simulator</h1>
+    <div class="description">Simulate different scenarios to see potential savings with compressed assets</div>
+
+    <div class="simulation-controls">
+        <div class="control-group">
+            <label for="tokenCount">Number of Tokens:</label>
+            <input type="number" id="tokenCount" value="500" min="0" step="1">
+        </div>
+
+        <div class="control-group">
+            <label for="nftCount">Number of NFTs:</label>
+            <input type="number" id="nftCount" value="500" min="0" step="1">
+        </div>
+
+        <div class="control-group">
+            <label for="tokenSize">Average Token Size (bytes):</label>
+            <input type="number" id="tokenSize" value="165" min="1" step="1">
+        </div>
+
+        <div class="control-group">
+            <label for="nftSize">Average NFT Size (bytes):</label>
+            <input type="number" id="nftSize" value="926" min="1" step="1">
+        </div>
+
+        <button class="submit-btn" id="simulateBtn">Run Simulation</button>
+    </div>
+
+    <div id="simulationResults" class="simulation-results"></div>
+
+    <script src="simulation.js"></script>
+</body>
+</html> 

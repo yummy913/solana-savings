@@ -16,9 +16,7 @@ const elements = {
     resultsDiv: document.getElementById('simulationResults'),
     inputs: {
         tokenCount: document.getElementById('tokenCount'),
-        nftCount: document.getElementById('nftCount'),
-        tokenSize: document.getElementById('tokenSize'),
-        nftSize: document.getElementById('nftSize')
+        nftCount: document.getElementById('nftCount')
     }
 };
 
@@ -35,16 +33,12 @@ const utils = {
 
 // Calculation Functions
 const calculations = {
-    calculateBytes: (count, size) => count * size,
-    
     calculateCost: (bytes) => (bytes * CONSTANTS.LAMPORTS_PER_BYTE_YEAR * CONSTANTS.EXEMPTION_YEARS) / CONSTANTS.LAMPORTS_PER_SOL,
     
     runSimulation: () => {
         // Get input values
         const tokenCount = utils.parseInput(elements.inputs.tokenCount.value);
         const nftCount = utils.parseInput(elements.inputs.nftCount.value);
-        const tokenSize = utils.parseInput(elements.inputs.tokenSize.value);
-        const nftSize = utils.parseInput(elements.inputs.nftSize.value);
 
         // Calculate totals
         const totalAssets = tokenCount + nftCount;

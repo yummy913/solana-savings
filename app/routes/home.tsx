@@ -52,7 +52,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    console.log(accountInfo);
+    
   }, [accountInfo]);
 
   async function getSolPrice() {

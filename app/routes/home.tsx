@@ -205,77 +205,83 @@ export default function Home() {
   };
 
   return (
-    <div className="Home">
-      <div className="Home-Header">
-        <span className="Home-Header-Name">solsavings</span>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
+      <div className="Home-Nav">
+        <a href="/" className="Home-Header-Name">solsavings</a>
+        <a href="/blog" className="Home-Header-Blogs">blogs</a>
       </div>
-      <div className="Home-Content">
-        <span className="Home-Content-Title">Compression Profiler</span>
-        <span className="Home-Content-Desc">Discover how much you're saving with ZK Compression on Solana</span>
-        <span className="Home-Content-Amount">
-          {accountInfo != null && solPrice
-            ? `${accountInfo.savings.toFixed(4)} SOL, $${(solPrice * accountInfo.savings).toFixed(3)}`
-            : "0 SOL, $0"}
-        </span>
-
-        <div className="Home-Content-Input">
-          <input
-            className="Home-Content-Input-Text"
-            placeholder="Enter Solana Wallet Address"
-            value={wallet}
-            onChange={(e) => setWallet(e.target.value)}
-            onKeyPress={handleKeyPress}
-          />
-          <button
-            className="Home-Content-Input-Button"
-            onClick={handleSubmit}
-            disabled={loading || !wallet.trim()}
-          >
-            {loading ? 'Loading...' : 'Submit'}
-          </button>
+      <div className="Home">
+        <div className="Home-Header">
+          {/* Removed duplicate solsavings here */}
         </div>
-        
-        {accountInfo && (
-          <>
-            <div className="Home-Content-Info">
-              {loading && <span>Loading...</span>}
-              {error && <span style={{ color: "red" }}>{error}</span>}
-              <span className="Home-Content-Info-Address">Number of Assets: {accountInfo.numAssets}</span>
-              <span className="Home-Content-Info-Assets">Compressed Bytes: {accountInfo.compressedBytes}</span>
-              <span className="Home-Content-Info-CBytes">Uncompressed Bytes: {accountInfo.uncompressedBytes}</span>
-              <span className="Home-Content-Info-Bytes">Compressed Cost: {accountInfo.compressedCost.toFixed(4)} SOL</span>
-              <span className="Home-Content-Info-CCost">Uncompressed Cost: {accountInfo.uncompressedCost.toFixed(4)} SOL</span>
-            </div>
-            <div className="Home-Content-Info-Coins">
-              {accountInfo.items.slice(0, loadedItemsCount).map((item, index) => {
-                const { tokenInfo, tokenData } = item;
-                if (!tokenInfo) return null;
+        <div className="Home-Content">
+          <span className="Home-Content-Title">Compression Profiler</span>
+          <span className="Home-Content-Desc">Discover how much you're saving with ZK Compression on Solana</span>
+          <span className="Home-Content-Amount">
+            {accountInfo != null && solPrice
+              ? `${accountInfo.savings.toFixed(4)} SOL, $${(solPrice * accountInfo.savings).toFixed(3)}`
+              : "0 SOL, $0"}
+          </span>
 
-                return (
-                  <Coin
-                    key={index}
-                    Image={tokenInfo.imageUri}
-                    Name={tokenInfo.name}
-                    Ticker={tokenInfo.ticker}
-                    Amount={(tokenData.amount / Math.pow(10, tokenInfo.decimals || 0)).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 6})}
-                  />
-                );
-              })}
-            </div>
-            {accountInfo && loadedItemsCount < accountInfo.items.length && (
-              <button
-                className="Home-Content-LoadMore"
-                onClick={loadMoreItems}
-                disabled={loadingMore}
-              >
-                {loadingMore ? 'Loading...' : 'Load More'}
-              </button>
-            )}
-          </>
-        )}
-      </div>
-      <div className="Home-Footer">
-        <span className="Home-Footer-Text">Built by NAB Labs</span>
+          <div className="Home-Content-Input">
+            <input
+              className="Home-Content-Input-Text"
+              placeholder="Enter Solana Wallet Address"
+              value={wallet}
+              onChange={(e) => setWallet(e.target.value)}
+              onKeyPress={handleKeyPress}
+            />
+            <button
+              className="Home-Content-Input-Button"
+              onClick={handleSubmit}
+              disabled={loading || !wallet.trim()}
+            >
+              {loading ? 'Loading...' : 'Submit'}
+            </button>
+          </div>
+          
+          {accountInfo && (
+            <>
+              <div className="Home-Content-Info">
+                {loading && <span>Loading...</span>}
+                {error && <span style={{ color: "red" }}>{error}</span>}
+                <span className="Home-Content-Info-Address">Number of Assets: {accountInfo.numAssets}</span>
+                <span className="Home-Content-Info-Assets">Compressed Bytes: {accountInfo.compressedBytes}</span>
+                <span className="Home-Content-Info-CBytes">Uncompressed Bytes: {accountInfo.uncompressedBytes}</span>
+                <span className="Home-Content-Info-Bytes">Compressed Cost: {accountInfo.compressedCost.toFixed(4)} SOL</span>
+                <span className="Home-Content-Info-CCost">Uncompressed Cost: {accountInfo.uncompressedCost.toFixed(4)} SOL</span>
+              </div>
+              <div className="Home-Content-Info-Coins">
+                {accountInfo.items.slice(0, loadedItemsCount).map((item, index) => {
+                  const { tokenInfo, tokenData } = item;
+                  if (!tokenInfo) return null;
+
+                  return (
+                    <Coin
+                      key={index}
+                      Image={tokenInfo.imageUri}
+                      Name={tokenInfo.name}
+                      Ticker={tokenInfo.ticker}
+                      Amount={(tokenData.amount / Math.pow(10, tokenInfo.decimals || 0)).toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 6})}
+                    />
+                  );
+                })}
+              </div>
+              {accountInfo && loadedItemsCount < accountInfo.items.length && (
+                <button
+                  className="Home-Content-LoadMore"
+                  onClick={loadMoreItems}
+                  disabled={loadingMore}
+                >
+                  {loadingMore ? 'Loading...' : 'Load More'}
+                </button>
+              )}
+            </>
+          )}
+        </div>
+        <div className="Home-Footer">
+          <span className="Home-Footer-Text">Built by NAB Labs</span>
+        </div>
       </div>
     </div>
   );

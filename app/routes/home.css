@@ -30,9 +30,19 @@ body, html {
     box-sizing: border-box;
 }
 
-.Home-Header-Name{
+.Home-Header-Name, .Home-Header-Blogs {
+    text-decoration: none !important;
+    color: #fff;
     font-family: 'Manrope';
-    color: white;
+    transition: color 0.2s;
+}
+
+.Home-Header-Name:hover, .Home-Header-Blogs:hover {
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.Home-Header-Name{
     font-size: 18px;
 }
 
@@ -48,6 +58,10 @@ body, html {
 .Home-Header-Buttons-Button{
     font-family: 'Manrope';
     color: white;
+    font-size: 18px;
+}
+
+.Home-Header-Blogs {
     font-size: 18px;
 }
 
@@ -283,6 +297,10 @@ body, html {
         font-size: 16px;
         padding: 6px 12px;
     }
+    .Home-Header-Blogs {
+        font-size: 16px;
+        margin-left: 1rem;
+    }
     .Home-Content {
         width: 96%;
         padding-top: 60px;
@@ -344,6 +362,13 @@ body, html {
         margin-left: 0;
         width: 100%;
         justify-content: flex-end;
+    }
+    .Home-Header-Blogs {
+        font-size: 16px;
+        margin-left: 0;
+        margin-top: 8px;
+        text-align: center;
+        width: 100%;
     }
     .Home-Content {
         width: 100%;
@@ -476,4 +501,11 @@ body, html {
     align-items: flex-start;
     width: 100%;
     gap: 2px;
+}
+
+.Home-Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0 2rem;
 }

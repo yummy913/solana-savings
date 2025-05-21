@@ -45,7 +45,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" />
       </head>
       <body>
-        {children}
+        <main>
+          {children}
+        </main>
         <ScrollRestoration />
         <Scripts />
       </body>

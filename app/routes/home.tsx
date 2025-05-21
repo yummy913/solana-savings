@@ -33,8 +33,8 @@ interface AccountInfo {
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Solana Savings" },
-    { name: "description", content: "" },
+    { title: "Solana Savings - NAB Labs" },
+    { name: "description", content: "Discover how much you're saving with ZK Compression on Solana" },
   ];
 }
 

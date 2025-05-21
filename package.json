@@ -2,6 +2,10 @@
   "name": "vite-project",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
@@ -27,7 +31,7 @@
     "vite": "5.1.0",
     "vite-tsconfig-paths": "4.2.2"
   },
-  "resolutions": {
+  "overrides": {
     "typescript": "5.1.6"
   }
 }

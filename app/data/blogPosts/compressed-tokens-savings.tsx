@@ -9,7 +9,6 @@ const CompressedTokensSavings: BlogPost = {
     titleSize: '2.5rem',
     paragraphSize: '1.1rem',
     headingSize: '1.8rem',
-    maxWidth: '800px',
     backgroundColor: 'transparent',
     textColor: 'rgba(255, 255, 255, 0.9)'
   },

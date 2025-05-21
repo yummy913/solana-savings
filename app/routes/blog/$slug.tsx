@@ -12,8 +12,8 @@ export default function BlogPostPage() {
     return (
       <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
         <div className="Home-Nav">
-          <a href="/" className="Home-Header-Name">solsavings</a>
-          <a href="/blog" className="Home-Header-Blogs">blogs</a>
+          <a href="/" className="Home-Header-Name" tabIndex={-1}>solsavings</a>
+          <a href="/blog" className="Home-Header-Blogs" tabIndex={-1}>blogs</a>
         </div>
         <div className="Home">
           <div className="Home-Content">
@@ -28,8 +28,8 @@ export default function BlogPostPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       <div className="Home-Nav">
-        <a href="/" className="Home-Header-Name">solsavings</a>
-        <a href="/blog" className="Home-Header-Blogs">blogs</a>
+        <a href="/" className="Home-Header-Name" tabIndex={-1}>solsavings</a>
+        <a href="/blog" className="Home-Header-Blogs" tabIndex={-1}>blogs</a>
       </div>
       <div className="Home">
         <div className="Home-Content">

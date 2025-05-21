@@ -209,8 +209,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       <div className="Home-Nav">
-        <a href="/" className="Home-Header-Name">solsavings</a>
-        <a href="/blog" className="Home-Header-Blogs">blogs</a>
+        <a href="/" className="Home-Header-Name" tabIndex="-1">solsavings</a>
+        <a href="/blog" className="Home-Header-Blogs" tabIndex="-1">blogs</a>
       </div>
       <div className="Home">
         <div className="Home-Header">
@@ -232,11 +232,13 @@ export default function Home() {
               value={wallet}
               onChange={(e) => setWallet(e.target.value)}
               onKeyPress={handleKeyPress}
+              tabIndex="-1"
             />
             <button
               className="Home-Content-Input-Button"
               onClick={handleSubmit}
               disabled={loading || !wallet.trim()}
+              tabIndex="-1"
             >
               {loading ? 'Loading...' : 'Submit'}
             </button>
@@ -274,6 +276,7 @@ export default function Home() {
                   className="Home-Content-LoadMore"
                   onClick={loadMoreItems}
                   disabled={loadingMore}
+                  tabIndex="-1"
                 >
                   {loadingMore ? 'Loading...' : 'Load More'}
                 </button>

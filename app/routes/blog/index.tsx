@@ -34,27 +34,29 @@ export default function BlogIndex() {
         <a href="/blog" className="Home-Header-Blogs" tabIndex={-1}>blogs</a>
       </div>
       <div className="Home">
-        <div className="Home-Content">
-          <span className="Home-Content-Title">Blog Posts</span>
-          <div className="blog-posts">
-            {blogPosts.map(post => {
-              const firstParagraph = getFirstParagraph(post.content);
-              return (
-                <a href={`/blog/${post.slug}`} key={post.id} className="blog-post-preview-link" tabIndex={-1}>
-                  <article className="blog-post-preview">
-                    <h2 className="blog-post-preview-title">
-                      {post.title}
-                    </h2>
-                    <div className="blog-post-preview-date">{post.date}</div>
-                    <div className="blog-post-preview-excerpt">
-                      {firstParagraph}
-                    </div>
-                  </article>
-                </a>
-              );
-            })}
+        <main>
+          <div className="Home-Content">
+            <span className="Home-Content-Title">Blog Posts</span>
+            <div className="blog-posts">
+              {blogPosts.map(post => {
+                const firstParagraph = getFirstParagraph(post.content);
+                return (
+                  <a href={`/blog/${post.slug}`} key={post.id} className="blog-post-preview-link" tabIndex={-1}>
+                    <article className="blog-post-preview">
+                      <h2 className="blog-post-preview-title">
+                        {post.title}
+                      </h2>
+                      <div className="blog-post-preview-date">{post.date}</div>
+                      <div className="blog-post-preview-excerpt">
+                        {firstParagraph}
+                      </div>
+                    </article>
+                  </a>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </main>
         <div className="Home-Footer">
           <span className="Home-Footer-Text">Built by NAB Labs</span>
         </div>

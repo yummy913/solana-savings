@@ -32,9 +32,11 @@ export default function BlogPostPage() {
         <a href="/blog" className="Home-Header-Blogs" tabIndex={-1}>blogs</a>
       </div>
       <div className="Home">
-        <div className="Home-Content">
-          <BlogPost post={post} />
-        </div>
+        <main>
+          <div className="Home-Content">
+            <BlogPost post={post} />
+          </div>
+        </main>
         <div className="Home-Footer">
           <span className="Home-Footer-Text">Built by NAB Labs</span>
         </div>

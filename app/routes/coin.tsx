@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/coins.css';
 
 interface CoinProps {
   Name: string;

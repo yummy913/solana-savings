@@ -1,9 +1,8 @@
-import React from 'react';
 import { useParams } from 'react-router';
-import { blogPosts } from '~/data/blogPosts';
+import { blogPosts } from '~/data/blogPosts/index';
 import BlogPost from '~/components/BlogPost';
 import '../home.css';
-import '~/styles/blog.css';
+import '../../styles/blog.css';
 
 export default function BlogPostPage() {
   const { slug } = useParams();
@@ -34,11 +33,7 @@ export default function BlogPostPage() {
       </div>
       <div className="Home">
         <div className="Home-Content">
-          <BlogPost
-            title={post.title}
-            content={post.content}
-            date={post.date}
-          />
+          <BlogPost post={post} />
         </div>
         <div className="Home-Footer">
           <span className="Home-Footer-Text">Built by NAB Labs</span>

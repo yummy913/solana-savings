@@ -1,6 +1,8 @@
 import type { Route } from "./+types/home";
 import { useState,useEffect } from "react";
 import './home.css';
+import '../styles/coins.css';
+import '../styles/blog.css';
 import Coin from './coin';
 
 interface TokenInfo {

@@ -1,20 +1,48 @@
 import React from 'react';
+import type { BlogPost } from '~/data/blogPosts';
 
 interface BlogPostProps {
-  title: string;
-  content: string;
-  date?: string;
+  post: BlogPost;
 }
 
-export default function BlogPost({ title, content, date }: BlogPostProps) {
+const defaultStyles = {
+  titleSize: '2.5rem',
+  paragraphSize: '1.1rem',
+  headingSize: '1.8rem',
+  maxWidth: '800px',
+  backgroundColor: 'transparent',
+  textColor: 'rgba(255, 255, 255, 0.9)'
+} as const;
+
+export default function BlogPost({ post }: BlogPostProps) {
+  const {
+    title,
+    content,
+    date,
+    customStyles = defaultStyles
+  } = post;
+
   return (
-    <article className="blog-post">
-      <h1 className="blog-post-title">{title}</h1>
+    <article 
+      className="blog-post"
+      style={{
+        maxWidth: customStyles.maxWidth,
+        backgroundColor: customStyles.backgroundColor,
+        color: customStyles.textColor
+      }}
+    >
+      <h1 
+        className="blog-post-title"
+        style={{ fontSize: customStyles.titleSize }}
+      >
+        {title}
+      </h1>
       {date && <div className="blog-post-date">{date}</div>}
-      <div className="blog-post-content">
-        {content.split('\n\n').map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
+      <div 
+        className="blog-post-content"
+        style={{ fontSize: customStyles.paragraphSize }}
+      >
+        {content}
       </div>
     </article>
   );

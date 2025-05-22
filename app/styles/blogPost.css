@@ -1,0 +1,9 @@
+.blog-image {
+  width: 100%;
+  max-width: 1200px;
+  min-width: 280px;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  object-fit: contain;
+} 

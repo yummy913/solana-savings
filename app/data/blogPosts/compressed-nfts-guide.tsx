@@ -36,23 +36,58 @@ const CompressedNFTsGuide: BlogPost = {
       <p>
         Compressed NFTs (cNFTs) are a special type of NFT on Solana designed to reduce storage costs and improve scalability. Traditional NFTs store all their data—like metadata, ownership details, and media links—directly on the blockchain, which can be expensive. Compressed NFTs use a technology called state compression to store most of their data off-chain while keeping a cryptographic "fingerprint" (a hash) on-chain. This drastically lowers the cost of minting and storing NFTs, making them more accessible for creators and collectors.
       </p>
+      <img 
+        src="\app\data\blogImages\a1i1.png" 
+        alt="Compressed NFTs Diagram" 
+        style={{ 
+          width: '100%', 
+          maxWidth: '1200px',
+          minWidth: '280px',
+          height: 'auto',
+          margin: '2rem auto', 
+          display: 'block', 
+          objectFit: 'contain'
+        }} 
+      />
 
       <h2>How Do Compressed NFTs Work?</h2>
       <p>
-        Compressed NFTs rely on Solana's State Compression and Bubblegum, a protocol developed by Metaplex, Solana's leading NFT platform. Here's a simple breakdown:
+        Compressed NFTs rely on three core technologies: State Compression, Merkle Trees, and optionally, zk-compression.
+      </p>
+
+      <h3>State Compression</h3>
+      <p>
+        Solana's state compression reduces on-chain storage by only recording the minimum necessary data. Instead of tracking every individual NFT's state, the blockchain stores a summary or root hash that represents the collection.
+      </p>
+
+      <h3>Merkle Trees</h3>
+      <p>
+        Merkle Trees are cryptographic structures where each leaf node contains a hash of data, and parent nodes hash combinations of child hashes. This enables large sets of data (e.g., thousands of NFTs) to be represented by a single root hash stored on-chain. It also allows individual NFTs to be independently verified without storing all their data on-chain.
+      </p>
+
+      <h3>zk-Compression</h3>
+      <p>
+        zk-compression, or zero-knowledge compression, is an emerging technique that incorporates zero-knowledge proofs into compressed NFT architecture. It allows data (such as ownership or metadata) to be cryptographically verified without exposing its contents publicly.
+      </p>
+
+      <p>
+        This is useful for applications requiring privacy, such as identity NFTs, private tickets, or secure digital credentials.
+      </p>
+
+      <h3>The Role of Bubblegum and Metaplex</h3>
+      <p>
+        Bubblegum is a protocol developed by Metaplex, Solana's leading NFT infrastructure provider. It facilitates the creation and management of compressed NFTs. Bubblegum handles:
       </p>
 
       <ul>
-        <li>
-          <strong>State Compression:</strong> Instead of storing all NFT data on Solana's blockchain, only a cryptographic hash is stored. This hash links to the full data (like metadata or images) stored off-chain, often on decentralized storage like Arweave or IPFS.
-        </li>
-        <li>
-          <strong>Merkle Trees:</strong> Compressed NFTs use Merkle Trees, a data structure that groups multiple NFTs into a single "tree." This allows thousands of NFTs to share a single on-chain hash, reducing costs. For example, a collection of 10,000 NFTs can be represented by one Merkle Tree root on-chain.
-        </li>
-        <li>
-          <strong>Bubblegum Protocol:</strong> Bubblegum enables creators to mint, manage, and transfer Compressed NFTs efficiently. It handles the complexity of Merkle Trees and ensures secure, verifiable ownership.
-        </li>
+        <li>Minting NFTs within Merkle Trees</li>
+        <li>Ensuring on-chain and off-chain data integrity</li>
+        <li>Managing transfers and updates</li>
       </ul>
+
+      <p>
+        Bubblegum abstracts away the complexity of state compression, making it easier for developers to adopt cNFTs.
+      </p>
 
       <h2>Why Use Compressed NFTs on Solana?</h2>
       <p>
@@ -90,7 +125,7 @@ const CompressedNFTsGuide: BlogPost = {
 
       <h2>How Much Can You Save?</h2>
       <p>
-        The savings with Compressed NFTs are significant. For example, minting 10,000 traditional NFTs might cost $10,000-$50,000 in fees, while Compressed NFTs could cost under $100 for the same collection. To see exactly how much you've saved using Compressed NFTs or tokens, check out Solana Savings, a site that calculates your cost reductions based on your project's scale.
+        The savings with Compressed NFTs are significant. For example, minting 10,000 traditional NFTs might cost $10,000-$50,000 in fees, while Compressed NFTs could cost under $100 for the same collection. To see exactly how much you've saved using Compressed NFTs or tokens, check out <a href="/" target="_blank" rel="noopener noreferrer">Solana Savings</a>, a site that calculates your cost reductions based on your project's scale.
       </p>
 
       <p>

@@ -12,6 +12,7 @@ export default defineConfig({
     fs: {
       strict: true,
     },
+    middlewareMode: false,
   },
   build: {
     rollupOptions: {
@@ -19,6 +20,9 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'favicon.ico') {
             return 'favicon.ico';
+          }
+          if (assetInfo.name === 'sitemap.xml') {
+            return 'sitemap.xml';
           }
           return 'assets/[name]-[hash][extname]';
         },

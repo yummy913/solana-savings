@@ -36,7 +36,7 @@ export default function BlogIndex() {
       <div className="Home">
         <main>
           <div className="Home-Content">
-            <span className="Home-Content-Title">Blog Posts</span>
+            <span className="Home-Content-Title">Infomrational Articles</span>
             <div className="blog-posts">
               {blogPosts.map(post => {
                 const firstParagraph = getFirstParagraph(post.content);

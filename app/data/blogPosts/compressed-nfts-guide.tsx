@@ -1,3 +1,5 @@
+import '/app/styles/blogPost.css';
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -37,17 +39,9 @@ const CompressedNFTsGuide: BlogPost = {
         Compressed NFTs (cNFTs) are a special type of NFT on Solana designed to reduce storage costs and improve scalability. Traditional NFTs store all their data—like metadata, ownership details, and media links—directly on the blockchain, which can be expensive. Compressed NFTs use a technology called state compression to store most of their data off-chain while keeping a cryptographic "fingerprint" (a hash) on-chain. This drastically lowers the cost of minting and storing NFTs, making them more accessible for creators and collectors.
       </p>
       <img 
-        src="\app\data\blogImages\a1i1.png" 
-        alt="Compressed NFTs Diagram" 
-        style={{ 
-          width: '100%', 
-          maxWidth: '1200px',
-          minWidth: '280px',
-          height: 'auto',
-          margin: '2rem auto', 
-          display: 'block', 
-          objectFit: 'contain'
-        }} 
+        src="\blogImages\a1i1.png" 
+        alt="Compressed NFT Image" 
+        className="blog-image"
       />
 
       <h2>How Do Compressed NFTs Work?</h2>

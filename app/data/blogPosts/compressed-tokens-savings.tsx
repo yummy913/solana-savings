@@ -1,4 +1,4 @@
-import type { BlogPost } from './compressed-nfts-guide';
+/*import type { BlogPost } from './compressed-nfts-guide';
 
 const CompressedTokensSavings: BlogPost = {
   id: '2',
@@ -101,4 +101,4 @@ const CompressedTokensSavings: BlogPost = {
   )
 };
 
-export default CompressedTokensSavings; 
+export default CompressedTokensSavings; */

@@ -19,7 +19,7 @@ export interface BlogPost {
 const CompressedNFTsGuide: BlogPost = {
   id: '1',
   title: 'What Are Compressed NFTs on Solana? A Beginner\'s Guide',
-  date: '2025-03-21',
+  date: '2025-05-21',
   slug: 'what-are-compressed-nfts-on-solana',
   customStyles: {
     titleSize: '2.5rem',

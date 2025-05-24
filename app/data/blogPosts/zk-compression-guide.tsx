@@ -1,6 +1,6 @@
 import React from 'react';
 import '/app/styles/blogPost.css';
-import type { BlogPost } from './compressed-nfts-guide';
+import type { BlogPost } from '../../types/blog';
 
 const ZkCompressionGuide: BlogPost = {
   id: '2',

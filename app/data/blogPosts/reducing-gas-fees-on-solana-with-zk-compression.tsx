@@ -14,8 +14,7 @@ const ReducingGasFeesonSolanawithzkCompression: BlogPost = {
     textColor: 'rgba(255, 255, 255, 0.9)'
   },
   content: (
-    <>
-```jsx
+
 <>
   <p>Solana, known for its high throughput and low transaction fees, is constantly evolving. One exciting development is the use of zero-knowledge (zk) compression to further reduce gas fees, making the network even more efficient and accessible. This post will explore how zk compression works, its benefits, and its potential impact on the Solana ecosystem.</p>
 
@@ -75,8 +74,7 @@ const ReducingGasFeesonSolanawithzkCompression: BlogPost = {
 
   <p>In conclusion, zk compression holds immense promise for reducing gas fees and improving the overall performance of the Solana network. While challenges remain, the potential benefits for users, developers, and the entire ecosystem are substantial. As the technology evolves, it could play a crucial role in making Solana a truly scalable and accessible blockchain platform.</p>
 </>
-```
-    </>
+
   )
 };
 

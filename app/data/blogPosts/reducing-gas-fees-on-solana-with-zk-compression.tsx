@@ -2,7 +2,7 @@ import '/app/styles/blogPost.css';
 import type { BlogPost } from '../../types/blog';
 
 const ReducingGasFeesonSolanawithzkCompression: BlogPost = {
-  id: '1',
+  id: '3',
   title: 'Reducing Gas Fees on Solana with zk Compression',
   date: '2025-05-25',
   slug: 'reducing-gas-fees-on-solana-with-zk-compression',

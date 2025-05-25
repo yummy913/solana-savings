@@ -50,7 +50,7 @@ const ZkCompressionGuide: BlogPost = {
         <img 
           src="https://trerc.tamu.edu/wp-content/uploads/files/Images/articles_other/2231-hero.jpg"
           alt="Privacy and Security Illustration"
-          style={{ maxWidth: '80%', height: 'auto', borderRadius: '8px' }}
+          className="blog-image"
         />
       </div>
 
@@ -75,7 +75,7 @@ const ZkCompressionGuide: BlogPost = {
         <img 
           src="/blogImages/a2i2.png"
           alt="Cost and Scalability Graph"
-          style={{ maxWidth: '50%', height: 'auto', borderRadius: '8px' }}
+          className="blog-image"
         />
       </div>
 

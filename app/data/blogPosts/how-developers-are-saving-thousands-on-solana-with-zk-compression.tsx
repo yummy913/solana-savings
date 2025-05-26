@@ -15,7 +15,7 @@ const HowDevelopersAreSavingThousandsonSolanaWithZKCompression: BlogPost = {
   },
   content: (
     <>
-```jsx
+
 <>
   <p>
     Solana, known for its high throughput and low transaction costs, is constantly evolving. Now, developers are discovering a powerful new tool to further optimize their on-chain costs: ZK compression. This innovative approach is enabling significant savings on storage and transaction fees, potentially saving projects thousands of dollars. Let's explore how.
@@ -46,7 +46,6 @@ const HowDevelopersAreSavingThousandsonSolanaWithZKCompression: BlogPost = {
     <li><strong>Improved Scalability:</strong> By reducing the amount of data processed, ZK compression contributes to improved scalability.</li>
     <li><strong>Enhanced Privacy:</strong> In some applications, ZK compression can also provide enhanced privacy by obscuring the underlying data.</li>
   </ul>
-  <img src="/blogImages/zk_compression_diagram.png" alt="ZK Compression Process Diagram" class="blog-image" />
 
   <h2>Real-World Applications</h2>
   <p>
@@ -93,7 +92,7 @@ const HowDevelopersAreSavingThousandsonSolanaWithZKCompression: BlogPost = {
     ZK compression represents a significant advancement in Solana development, offering developers a powerful tool to optimize costs and improve scalability. While challenges remain, the potential benefits are undeniable. As the technology continues to evolve, we can expect to see even more innovative applications of ZK compression within the Solana ecosystem, further solidifying its position as a leading blockchain platform.
   </p>
 </>
-```
+
     </>
   )
 };

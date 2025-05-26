@@ -26,7 +26,7 @@ const zkCompressionvsTraditionalCompressionWhichisBetterforSolana: BlogPost = {
       <h3>zk Compression</h3>
       <p>zk Compression leverages zero-knowledge proofs (ZKPs) to compress data in a unique way. Instead of directly reducing the size of the data itself, it proves that a certain computation or statement about the data is true without revealing the data itself. This proof, which is much smaller than the original data, can be stored on-chain.</p>
 
-      <img src="/blogImages/compression_comparison.png" alt="Comparison of Traditional and ZK Compression" class="blog-image" />
+      <img src="/blogImages/compression_comparison.png" alt="Comparison of Traditional and ZK Compression" className="blog-image" />
 
       <h2>How Does Each Method Work on Solana?</h2>
 

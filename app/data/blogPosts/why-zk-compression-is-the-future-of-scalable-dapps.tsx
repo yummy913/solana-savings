@@ -15,7 +15,6 @@ const WhyZKCompressionistheFutureofScalabledApps: BlogPost = {
   },
   content: (
     <>
-```jsx
 <>
   <p>
     Decentralized applications (dApps) are revolutionizing various industries, but their scalability remains a significant hurdle. Enter ZK Compression – a groundbreaking technique promising to unlock a new era of efficient and cost-effective dApp development. By significantly reducing the data footprint required for on-chain transactions, ZK Compression has the potential to drastically improve throughput, lower gas fees, and enable more complex and computationally intensive applications on blockchains like Ethereum, Solana, and others.
@@ -96,7 +95,6 @@ const WhyZKCompressionistheFutureofScalabledApps: BlogPost = {
     ZK Compression represents a significant step towards building truly scalable and efficient dApps. By leveraging the power of zero-knowledge proofs, we can unlock new possibilities for blockchain technology and create a more accessible and user-friendly decentralized ecosystem. As the technology matures and adoption grows, ZK Compression is poised to play a pivotal role in shaping the future of Web3.
   </p>
 </>
-```
     </>
   )
 };

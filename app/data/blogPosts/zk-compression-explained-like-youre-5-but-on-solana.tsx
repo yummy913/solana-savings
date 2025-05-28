@@ -3,7 +3,7 @@ import type { BlogPost } from '../../types/blog';
 
 const ZKCompressionExplainedLikeYoure5ButonSolana: BlogPost = {
   id: '1',
-  title: 'ZK Compression Explained Like You're 5 (But on Solana)',
+  title: 'ZK Compression Explained Like You\'re 5 (But on Solana)',
   date: '2025-05-28',
   slug: 'zk-compression-explained-like-youre-5-but-on-solana',
   customStyles: {

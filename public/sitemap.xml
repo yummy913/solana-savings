@@ -20,4 +20,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://solana-savings.vercel.app/blog/zk-compression-explained-like-youre-5-but-on-solana</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solana-savings.vercel.app/blog/how-developers-are-saving-thousands-on-solana-with-zk-compression</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solana-savings.vercel.app/blog/zk-compression-vs-traditional-compression-which-is-better-for-solana</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset> 

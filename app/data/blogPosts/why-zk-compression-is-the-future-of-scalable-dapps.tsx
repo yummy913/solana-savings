@@ -2,7 +2,7 @@ import '/app/styles/blogPost.css';
 import type { BlogPost } from '../../types/blog';
 
 const WhyZKCompressionistheFutureofScalabledApps: BlogPost = {
-  id: '1',
+  id: '6',
   title: 'Why ZK Compression is the Future of Scalable dApps',
   date: '2025-05-28',
   slug: 'why-zk-compression-is-the-future-of-scalable-dapps',

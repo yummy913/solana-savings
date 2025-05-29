@@ -2,7 +2,7 @@ import '/app/styles/blogPost.css';
 import type { BlogPost } from '../../types/blog';
 
 const SolanaZKCompressionSavingsCalculator: BlogPost = {
-  id: '1',
+  id: '7',
   title: 'Solana ZK Compression Savings Calculator',
   date: '2025-05-29',
   slug: 'solana-zk-compression-savings-calculator',
@@ -15,8 +15,7 @@ const SolanaZKCompressionSavingsCalculator: BlogPost = {
   },
   content: (
     <>
-```jsx
-<React.Fragment>
+
   <p>
     In the ever-evolving landscape of blockchain technology, optimizing transaction costs and improving network efficiency are paramount. ZK Compression on Solana promises significant savings and enhanced performance. Understanding how this technology works and how much it can save you is crucial for anyone building on or interacting with the Solana ecosystem. Our guide explores Solana ZK Compression, its benefits, and introduces a practical tool to calculate your potential savings.
   </p>
@@ -69,7 +68,7 @@ const SolanaZKCompressionSavingsCalculator: BlogPost = {
     <li><strong>Data Storage:</strong> Efficiently store verifiable data on-chain for applications requiring data integrity and accessibility.</li>
   </ul>
 
-  <img src="/blogImages/zk-compression.png" alt="ZK Compression Diagram" class="blog-image" />
+  <img src="https://www.zkcompression.com/~gitbook/image?url=https%3A%2F%2F3488020389-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FDBJ4vLlhHTdkUGOiHxbB%252Fuploads%252FikMGOt2gYlH0YAyIDMGR%252Fimage.png%3Falt%3Dmedia%26token%3D61e5f88c-7fba-4506-9be5-a6b673831878&width=768&dpr=4&quality=100&sign=548492e0&sv=2" alt="ZK Compression Diagram" class="blog-image" />
 
   <h2>Challenges and Considerations</h2>
 
@@ -109,8 +108,6 @@ const SolanaZKCompressionSavingsCalculator: BlogPost = {
   <p>
     ZK Compression represents a significant step forward in optimizing blockchain technology. By reducing transaction costs, improving network throughput, and enhancing scalability, it paves the way for a more efficient and accessible Solana ecosystem. Tools like <a href="https://solana-savings.vercel.app/" target="_blank" rel="noopener noreferrer">Solana Savings</a> can help you quantify the potential benefits and make informed decisions about implementing ZK Compression in your projects. As the technology evolves, its impact on the Solana landscape will only continue to grow.
   </p>
-</React.Fragment>
-```
     </>
   )
 };

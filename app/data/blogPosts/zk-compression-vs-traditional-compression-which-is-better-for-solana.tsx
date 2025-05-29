@@ -2,7 +2,7 @@ import '/app/styles/blogPost.css';
 import type { BlogPost } from '../../types/blog';
 
 const zkCompressionvsTraditionalCompressionWhichisBetterforSolana: BlogPost = {
-  id: '1',
+  id: '3',
   title: 'zk Compression vs. Traditional Compression: Which is Better for Solana?',
   date: '2025-05-25',
   slug: 'zk-compression-vs-traditional-compression-which-is-better-for-solana',

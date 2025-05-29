@@ -36,7 +36,12 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://solana-savings.vercel.app/blog/why-zk-compression-is-the-future-of-scalable-dapps.tsx</loc>
+    <loc>https://solana-savings.vercel.app/blog/why-zk-compression-is-the-future-of-scalable-dapps</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solana-savings.vercel.app/blog/solana-zk-compression-savings-calculator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

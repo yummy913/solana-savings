@@ -2,7 +2,7 @@ import '/app/styles/blogPost.css';
 import type { BlogPost } from '../../types/blog';
 
 const HowDevelopersAreSavingThousandsonSolanaWithZKCompression: BlogPost = {
-  id: '1',
+  id: '4',
   title: 'How Developers Are Saving Thousands on Solana With ZK Compression',
   date: '2025-05-26',
   slug: 'how-developers-are-saving-thousands-on-solana-with-zk-compression',

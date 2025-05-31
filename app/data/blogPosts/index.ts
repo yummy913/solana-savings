@@ -6,6 +6,7 @@ import HowDevelopersAreSavingThousandsonSolanaWithZKCompression from './how-deve
 import ZKCompressionExplainedLikeYoure5ButonSolana from './zk-compression-explained-like-youre-5-but-on-solana';
 import WhyZKCompressionistheFutureofScalabledApps from './why-zk-compression-is-the-future-of-scalable-dapps';
 import SolanaZKCompressionSavingsCalculator from './solana-zk-compression-savings-calculator';
+import WhyDevelopersChooseZKCompression from './why-developers-choose-zk-compression';
 
 
 export type { BlogPost };
@@ -17,5 +18,6 @@ export const blogPosts: BlogPost[] = [
   HowDevelopersAreSavingThousandsonSolanaWithZKCompression,
   ZKCompressionExplainedLikeYoure5ButonSolana,
   WhyZKCompressionistheFutureofScalabledApps,
-  SolanaZKCompressionSavingsCalculator
+  SolanaZKCompressionSavingsCalculator,
+  WhyDevelopersChooseZKCompression
 ]; 

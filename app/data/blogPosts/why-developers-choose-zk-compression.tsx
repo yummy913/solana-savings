@@ -15,7 +15,7 @@ const WhyDevelopersChooseZKCompression: BlogPost = {
   },
   content: (
     <>
-<p>In the rapidly evolving world of blockchain, efficiency and scalability are paramount. Developers are constantly seeking innovative solutions to reduce costs, improve transaction speeds, and enhance user experience. One such solution gaining significant traction is ZK Compression. This blog post will explore why developers are increasingly choosing ZK Compression to optimize their blockchain applications.</p>
+    <p>In the rapidly evolving world of blockchain, efficiency and scalability are paramount. Developers are constantly seeking innovative solutions to reduce costs, improve transaction speeds, and enhance user experience. One such solution gaining significant traction is ZK Compression. This blog post will explore why developers are increasingly choosing ZK Compression to optimize their blockchain applications.</p>
 
       <h2>What is ZK Compression?</h2>
       <p>ZK Compression leverages Zero-Knowledge Succinct Non-Interactive Argument of Knowledge (zk-SNARKs) to compress blockchain data without sacrificing its integrity.  In essence, it allows developers to represent large amounts of data with significantly smaller proofs, which can be verified quickly and cheaply. This leads to dramatic reductions in storage costs and transaction fees.</p>
@@ -27,7 +27,7 @@ const WhyDevelopersChooseZKCompression: BlogPost = {
         <li><strong>Proof Verification:</strong> The proof can be quickly verified on-chain, confirming the validity of the compressed data without needing to re-execute the original computation.</li>
         <li><strong>Data Storage:</strong>  Only the small proof needs to be stored, reducing storage requirements.</li>
       </ul>
-      <img src="/blogImages/zk-compression-diagram.png" alt="Diagram illustrating ZK Compression process" class="blog-image" />
+
 
       <h2>Benefits of ZK Compression</h2>
       <p>ZK Compression offers a multitude of benefits for blockchain developers:</p>
